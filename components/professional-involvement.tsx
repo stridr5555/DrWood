@@ -80,8 +80,7 @@ export function ProfessionalInvolvement() {
                   alt={professional.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                {/* Overlay that appears on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-transparent opacity-100 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <h3 className="font-serif text-xl font-bold text-white mb-2 text-balance">{professional.title}</h3>
                   <p className="text-white/90 text-sm leading-relaxed text-pretty">{professional.description}</p>
                   <div className="mt-4 flex items-center text-white text-sm font-medium">
