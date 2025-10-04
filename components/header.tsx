@@ -42,13 +42,13 @@ export default function Header() {
           isScrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-3 sm:px-4 lg:px-8 max-w-full">
-          <div className="flex items-center justify-between h-16 sm:h-20 min-h-[64px]">
-            <Link href="/" className="flex items-center gap-2 group z-50 flex-shrink-0">
+        <div className="container mx-auto px-3 sm:px-4 lg:px-8 w-full overflow-hidden">
+          <div className="flex items-center justify-between h-16 sm:h-20 min-h-[64px] gap-2">
+            <Link href="/" className="flex items-center gap-2 group z-50 flex-shrink min-w-0">
               <img
                 src="/images/logo-original.png"
                 alt="Cedric S. Wood PhD, LPC - Relationship Counselor"
-                className="h-10 sm:h-12 md:h-16 w-auto max-w-[180px] sm:max-w-[220px] transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
+                className="h-8 sm:h-12 md:h-16 w-auto max-w-[140px] sm:max-w-[220px] transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
               />
             </Link>
 

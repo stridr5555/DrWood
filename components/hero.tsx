@@ -26,19 +26,19 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 w-full">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 w-screen max-w-full">
         <img
           src="/happy-family-outdoors-professional-counseling.jpg"
           alt="Family counseling"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover max-w-full"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white/40 to-white/90" />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 lg:px-8 relative z-10" ref={heroRef}>
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 w-full max-w-full" ref={heroRef}>
         <div className="max-w-4xl mx-auto text-center opacity-0" style={{ animationDelay: "0.2s" }}>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-tight text-balance px-4">
             Building Stronger Relationships Through Professional Counseling
