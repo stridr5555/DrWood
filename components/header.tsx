@@ -42,18 +42,16 @@ export default function Header() {
           isScrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group z-50">
+        <div className="container mx-auto px-3 sm:px-4 lg:px-8 max-w-full">
+          <div className="flex items-center justify-between h-16 sm:h-20 min-h-[64px]">
+            <Link href="/" className="flex items-center gap-2 group z-50 flex-shrink-0">
               <img
                 src="/images/logo-original.png"
                 alt="Cedric S. Wood PhD, LPC - Relationship Counselor"
-                className="h-12 sm:h-16 w-auto transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
+                className="h-10 sm:h-12 md:h-16 w-auto max-w-[180px] sm:max-w-[220px] transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
               />
             </Link>
 
-            {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
               <Link
                 href="/"
@@ -91,11 +89,11 @@ export default function Header() {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-foreground hover:text-primary transition-all duration-200 hover:scale-110 z-50 relative"
+              className="lg:hidden p-2 sm:p-3 text-foreground hover:text-primary transition-all duration-200 hover:scale-110 z-50 relative flex-shrink-0 touch-manipulation"
               aria-label="Toggle menu"
               aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6 sm:w-7 sm:h-7" /> : <Menu className="w-6 h-6 sm:w-7 sm:h-7" />}
             </button>
           </div>
         </div>
