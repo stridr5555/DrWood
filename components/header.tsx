@@ -41,9 +41,9 @@ export default function Header() {
           isScrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-3 sm:px-4 lg:px-8 max-w-screen-2xl">
-          <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4">
-            <Link href="/" className="flex items-center gap-2 group z-50 flex-shrink overflow-hidden">
+        <div className="container mx-auto px-3 sm:px-4 lg:px-8 max-w-screen-2xl max-w-full">
+          <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4 max-w-full">
+            <Link href="/" className="flex items-center gap-2 group z-50 flex-shrink overflow-hidden min-w-0">
               <img
                 src="/images/logo-original.png"
                 alt="Cedric S. Wood PhD, LPC - Relationship Counselor"

@@ -26,9 +26,9 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 w-full">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 w-full max-w-full">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0 w-screen max-w-full">
+      <div className="absolute inset-0 z-0 w-full max-w-full">
         <img
           src="/happy-family-outdoors-professional-counseling.jpg"
           alt="Family counseling"
