@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -42,13 +41,13 @@ export default function Header() {
           isScrolled ? "bg-background/95 backdrop-blur-md shadow-sm" : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-3 sm:px-4 lg:px-8 w-full overflow-hidden">
-          <div className="flex items-center justify-between h-16 sm:h-20 min-h-[64px] gap-2">
-            <Link href="/" className="flex items-center gap-2 group z-50 flex-shrink min-w-0">
+        <div className="container mx-auto px-3 sm:px-4 lg:px-8 max-w-screen-2xl">
+          <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4">
+            <Link href="/" className="flex items-center gap-2 group z-50 flex-shrink overflow-hidden">
               <img
                 src="/images/logo-original.png"
                 alt="Cedric S. Wood PhD, LPC - Relationship Counselor"
-                className="h-8 sm:h-12 md:h-16 w-auto max-w-[140px] sm:max-w-[220px] transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
+                className="h-12 sm:h-14 md:h-16 w-auto max-w-[180px] sm:max-w-[240px] md:max-w-[280px] object-contain transition-all duration-300 group-hover:scale-110 group-hover:brightness-110"
               />
             </Link>
 
@@ -89,11 +88,25 @@ export default function Header() {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 sm:p-3 text-foreground hover:text-primary transition-all duration-200 hover:scale-110 z-50 relative flex-shrink-0 touch-manipulation"
+              className="lg:hidden p-2 text-foreground hover:text-primary transition-all duration-200 z-50 relative flex-shrink-0 touch-manipulation w-10 h-10 flex items-center justify-center"
               aria-label="Toggle menu"
               aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6 sm:w-7 sm:h-7" /> : <Menu className="w-6 h-6 sm:w-7 sm:h-7" />}
+              <div className="flex flex-col gap-1 w-6 h-6 justify-center items-center">
+                <span
+                  className={`w-full h-0.5 bg-current transition-all duration-300 ${
+                    isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+                  }`}
+                ></span>
+                <span
+                  className={`w-full h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`}
+                ></span>
+                <span
+                  className={`w-full h-0.5 bg-current transition-all duration-300 ${
+                    isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                  }`}
+                ></span>
+              </div>
             </button>
           </div>
         </div>
