@@ -62,33 +62,33 @@ export function Services() {
   }, [])
 
   return (
-    <section id="counseling" className="py-24 bg-background" ref={sectionRef}>
+    <section id="counseling" className="py-16 sm:py-20 md:py-24 bg-background" ref={sectionRef}>
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
             Comprehensive Counseling Services
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty px-4">
             Professional support tailored to your unique needs and circumstances
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="service-card opacity-0 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] border-border bg-card group"
+              className="service-card opacity-0 p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] border-border bg-card group"
             >
               <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-3xl group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/10 flex items-center justify-center text-2xl sm:text-3xl group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
                   {service.icon}
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-card-foreground">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-card-foreground">
                   <a href={service.link} className="hover:text-primary transition-colors duration-200">
                     {service.title}
                   </a>
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{service.description}</p>
               </div>
             </Card>
           ))}

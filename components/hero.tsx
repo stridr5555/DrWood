@@ -40,22 +40,25 @@ export function Hero() {
       {/* Content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10" ref={heroRef}>
         <div className="max-w-4xl mx-auto text-center opacity-0" style={{ animationDelay: "0.2s" }}>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight text-balance">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-tight text-balance px-4">
             Building Stronger Relationships Through Professional Counseling
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed text-pretty max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed text-pretty max-w-3xl mx-auto px-4">
             With 21 years of counseling experience, Dr. Cedric Wood helps individuals and families navigate life's
             challenges with expertise and compassion.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 group">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
+            <Button
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto group"
+            >
               Schedule a Consultation
               <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 bg-transparent"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base sm:text-lg px-6 sm:px-8 bg-transparent w-full sm:w-auto"
             >
               Learn More About Services
             </Button>
